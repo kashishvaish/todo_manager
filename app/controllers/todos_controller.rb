@@ -30,4 +30,5 @@ class TodosController < ApplicationController
     todo.completed = completed
     todo.save!
     render plain: "Updated todo completed status to #{completed}"
+  end
 end
