@@ -27,8 +27,8 @@ class UsersController < ApplicationController
   def check
     email = params[:email]
     password = params[:password]
-    user = User.where(email: email, password: password)
-    response_text = (user.length != 0)
+    user = User.where(email: email, password: password).first
+    response_text = user ? "true" : "false"
     render plain: response_text
   end
 end
