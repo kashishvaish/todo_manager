@@ -47,16 +47,14 @@ body {
 .TodoItem-checkbox {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
 }
-.TodoItem-overdueLabel {
-  color: #c53030;
-  font-size: 12px;
-  margin-left: 10px;
-  display: inline;
+.TodoItem-completed {
+  text-decoration: line-through;
 }
 .TodoItem-date {
   color: #726a7e;
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 10px;
   display: inline;
 }
