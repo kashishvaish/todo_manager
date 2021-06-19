@@ -15,6 +15,14 @@ class Todo < ActiveRecord::Base
     where("due_date > ?", Date.today)
   end
 
+  def self.order_by_due_date
+    order(:due_date)
+  end
+
+  def self.order_by_id
+    order(:id)
+  end
+
   def self.completed
     where(completed: true)
   end
