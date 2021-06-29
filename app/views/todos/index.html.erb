@@ -5,7 +5,7 @@
     <%= date_field_tag "due_date", nil, class: "AddTodo-date", required: true %>
     <%= submit_tag "Add", class: "AddTodo-button" %>
   <% end %>
-  <%= render partial: "todo-section", locals: { section_title: "Overdue", todos: Todo.overdue.order_by_due_date, show_due_date: true } %>
-  <%= render partial: "todo-section", locals: { section_title: "Due Today", todos: Todo.due_today.order_by_id, show_due_date: false } %>
-  <%= render partial: "todo-section", locals: { section_title: "Due Later", todos: Todo.due_later.order_by_due_date, show_due_date: true } %>
+  <%= render partial: "todo-section", locals: { section_title: "Overdue", todos: @todos.overdue.order_by_due_date, show_due_date: true } %>
+  <%= render partial: "todo-section", locals: { section_title: "Due Today", todos: @todos.due_today.order_by_id, show_due_date: false } %>
+  <%= render partial: "todo-section", locals: { section_title: "Due Later", todos: @todos.due_later.order_by_due_date, show_due_date: true } %>
 </main>
